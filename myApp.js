@@ -9,9 +9,9 @@ mongoose.connect(process.env.MONGO_URI, {
 const { Schema } = mongoose
 
 const Person = new Schema({
-  name: "Baby",
-  age: "34",
-  favoriteFoods: ["chocolate", "raspberries", "mangosteen", "ice cream"]
+  name: String,
+  age: Number,
+  favoriteFoods: Array
 })
 
 const createAndSavePerson = (done) => {
