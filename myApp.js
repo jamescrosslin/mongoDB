@@ -28,8 +28,7 @@ const createAndSavePerson = (done) => {
   })
 }
 
-const createManyPeople = (arrayOfPeople, done) => {
-  const arrayOfPeople = [
+const arrayOfPeople = [
     {
       name: "Baby",
       age: 34,
@@ -50,8 +49,8 @@ const createManyPeople = (arrayOfPeople, done) => {
       age: 5,
       favoriteFoods: ["used tissues", "dinner", "yellow things"]
     }
-  ]
-
+]
+const createManyPeople = (arrayOfPeople, done) => {
   Person.create(arrayOfPeople, (err, data) => {
     if (err) return console.error(message.err)
     done(null, data)
